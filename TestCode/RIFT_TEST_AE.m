@@ -42,7 +42,7 @@ for kkk=2:8
        %% geocodedL2P
         DEM = ' Absolute-dataset\ZZG_USGS10m_WGS84.tif'; 
         inRPC2 = [' Absolute-dataset\SAR+RPC+GT\',name2,'.rpb']; 
-		inTIF2 = [' Absolute-dataset\SAR+RPC+GT\',name2,'.tiff'];
+	inTIF2 = [' Absolute-dataset\SAR+RPC+GT\',name2,'.tiff'];
         if(~exist(inRPC2,'file'))
             continue;
         end
