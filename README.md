@@ -29,11 +29,14 @@ All the images are stored in uint16 tiff format. Some examples are given as foll
 # Contact Us
 If you have any questions or suggestions on improving the usability of the dataset, please contact Yuming Xiang (z199208081010@163.com/xiangym@aircas.ac.cn).
 
+For more details, please refer to the corresponding paper: "A Global-to-local Algorithm for High-resolution Optical and SAR Image Registration" ([https://ieeexplore.ieee.org/abstract/document/9204802](https://ieeexplore.ieee.org/abstract/document/10233894)).
 
-@article{xiang2023global,
-  title={A Global-to-local Algorithm for High-resolution Optical and SAR Image Registration},
-  author={Xiang, Yuming and Wang, Xuanqi and Wang, Feng and You, Hongjian and Qiu, Xiaolan and Fu, Kun},
-  journal={IEEE Transactions on Geoscience and Remote Sensing},
-  year={2023},
-  publisher={IEEE}
-}
+If you are using this dataset in your project, we kindly ask you to cite:
+
+    @article{xiang2023global, 
+    title={A Global-to-local Algorithm for High-resolution Optical and SAR Image Registration}, 
+    author={Xiang, Yuming and Wang, Xuanqi and Wang, Feng and You, Hongjian and Qiu, Xiaolan and Fu, Kun}, 
+    journal={IEEE Transactions on Geoscience and Remote Sensing}, 
+    year={2023}, 
+    publisher={IEEE}
+    }
