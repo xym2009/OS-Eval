@@ -27,25 +27,27 @@ sarN{11}='GF3_KAS_SL_916996_W95.9_N41.3_20191102_L1B_HH_L10004355418';
 sarN{12}='GF3_KAS_SL_016159_W95.9_N41.3_20190905_L1B_HH_L10004226574';
 sarN{13}='GF3_MYN_SL_015467_W95.9_N41.3_20190719_L1B_HH_L10004125928';
 
-[DEMSRC,dR]=geotiffread('H:/REFdata/USGS10m/OMH_USGS10m.tif');
+[DEMSRC,dR]=geotiffread('Relative-dataset\OMH_USGS10m_WGS84.tif');
 outRes = 1.0; outLat = 41.293983;
 for k=1:11
     for kk=1:13
         for kkk=4:9
             name1=[optN{k},'-',num2str(kkk)]; name2=[sarN{kk},'-',num2str(kkk)];
             X = ['Match ',name1,' ',name2];disp(X)
-            file_image1=['C:\Users\xym\Documents\MATLAB\Image-Registration-master\OSBenchMark\CFOG-main\L2\',name1,'-L2.tiff'];
-            file_image2=['C:\Users\xym\Documents\MATLAB\Image-Registration-master\OSBenchMark\CFOG-main\L2\',name2,'-L2.tiff'];
+            file_image1=['Relative-dataset\Processed\OPT-ORG-DEM\',name1,'-L2.tiff'];
+            file_image2=['Relative-dataset\Processed\SAR-ORG-DEM\',name2,'-L2.tiff'];
             %% geocodedL2P
-            inRPC1 = [' H:\MatchTest\BenchMark\',name1,'.rpb'];inTIF1 = [' H:\MatchTest\BenchMark\',name1,'.tiff'];
-            DEM = ' H:\REFdata\USGS10m\OMH_USGS10m.tif'; outTIF1 = [' ',file_image1];
+            inRPC1 = [' Relative-dataset\OPT+RPC+GT\',name1,'.rpb'];
+			inTIF1 = [' Relative-dataset\OPT+RPC+GT\',name1,'.tiff'];
+            DEM = ' Relative-dataset\OMH_USGS10m_WGS84.tif'; outTIF1 = [' ',file_image1];
             if(~exist(inRPC1,'file'))
                 continue;
             end
             if(~exist(file_image1,'file'))
                 CMD = [geocodedL2P, inTIF1, inRPC1, DEM, outTIF1, ' ', num2str(outRes), ' ', num2str(outLat)];system(CMD);
             end
-            inRPC2 = [' H:\MatchTest\BenchMark\',name2,'.rpb']; inTIF2 = [' H:\MatchTest\BenchMark\',name2,'.tiff'];
+            inRPC2 = [' Relative-dataset\SAR+RPC+GT\',name2,'.rpb']; 
+			inTIF2 = [' Relative-dataset\SAR+RPC+GT\',name2,'.tiff'];
             if(~exist(inRPC2,'file'))
                 continue;
             end
@@ -56,7 +58,7 @@ for k=1:11
             %% read geotiff
             matchName = ['./Links/',name1,'.tiff_Link_',name2,'.tiff.txt'];
             if(exist(matchName,'file'))
-%                 continue;
+                 continue;
             end
             [image_1,R1]=geotiffread(file_image1);
             [image_2,R2]=geotiffread(file_image2);
@@ -68,11 +70,10 @@ for k=1:11
             [indexPairs,matchmetric] = matchFeatures(des_m1.des,des_m2.des,'MaxRatio',1,'MatchThreshold', 100);
             matchedPoints1 = des_m1.kps(indexPairs(:, 1), :);
             matchedPoints2 = des_m2.kps(indexPairs(:, 2), :);
-%             [H,rmse,cor1,cor2]=FSC(matchedPoints1,matchedPoints2,'affine',3);
             toc
             %% save links
-            addpath 'C:\Users\xym\Documents\MATLAB\Image-Registration-master\OSBenchMark\RPCprocess'
-            rpc_image1=['H:\MatchTest\BenchMark\',name1,'.rpb']; RPC1=readRPC(rpc_image1);
+            addpath '..\RPCprocess'
+            rpc_image1=['Relative-dataset\OPT+RPC+GT\',name1,'.rpb']; RPC1=readRPC(rpc_image1);
             cleanedPoints1 = matchedPoints1; cleanedPoints2 = matchedPoints2;
             fp=fopen(matchName,'w+');
             fprintf(fp,'%d\n',size(cleanedPoints1,1));
