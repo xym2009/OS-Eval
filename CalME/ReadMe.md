@@ -6,6 +6,8 @@ For example:
 
 ![1693893215259](https://github.com/xym2009/OS-Eval/assets/19380078/a9a298ae-78bb-48e7-83e4-8b8a08ddaa20)
 
+![1693893350920](https://github.com/xym2009/OS-Eval/assets/19380078/bd133e3b-134f-4966-9eb4-e5f6df1e7304)
+
 Config.txt --> the configuration file 
 
     threshold:3  --> threshold in RANSAC
