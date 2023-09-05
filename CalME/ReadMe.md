@@ -8,6 +8,8 @@ For example:
 
 ![1693893350920](https://github.com/xym2009/OS-Eval/assets/19380078/bd133e3b-134f-4966-9eb4-e5f6df1e7304)
 
+The code is tested on Ubuntu 18.04 with opencv460 and gdal1.11.
+
 Config.txt --> the configuration file 
 
     threshold:3  --> threshold in RANSAC
