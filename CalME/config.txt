@@ -1,0 +1,9 @@
+TemplateSize:200
+threshold:3
+Method:RIFT
+reference:0
+sensed:0
+use_dsm:0
+testN:4
+finematch:0
+mode:RE
