@@ -1,6 +1,6 @@
 # OS-Eval
 
-This repo contains an evaluation dataset consisting of hundreds of pairs of sub-meter resolution optical and SAR images, and uses meta poles, which have clear structures in both optical and SAR images, as ground truth to quantitatively evaluate the optical and SAR registration algorithms. We hope this evaluation dataset can provide an equitable and highly precise comparison of hand-crafted algorithms, as well as a generalization evaluation for deep learning networks. The download link is 链接：https://pan.baidu.com/s/1P0b14oEercCHLTk4m5THKw?pwd=ikaa.
+This repo contains an evaluation dataset consisting of hundreds of pairs of sub-meter resolution optical and SAR images, and uses meta poles, which have clear structures in both optical and SAR images, as ground truth to quantitatively evaluate the optical and SAR registration algorithms. We hope this evaluation dataset can provide an equitable and highly precise comparison of hand-crafted algorithms, as well as a generalization evaluation for deep learning networks. The download link is：https://pan.baidu.com/s/1P0b14oEercCHLTk4m5THKw?pwd=ikaa.
 
 The contents of this dataset are subject to CC BY-NC-ND (Creative Commons Attribution-NoDerivatives 4.0 International).
 
