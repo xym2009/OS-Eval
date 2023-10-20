@@ -1,6 +1,6 @@
 # OS-Eval
 
-This repo contains an evaluation dataset consisting of hundreds of pairs of sub-meter resolution optical and SAR images, and use meta poles, which have clear structures in both optical and SAR images, as ground truth to quantitatively evaluate the optical and SAR registration algorithms. We hope this evaluation dataset can provide an equitable and highly precise comparison of hand-crafted algorithms, as well as a generalization evaluation for deep learning networks. The download link is https://pan.baidu.com/s/1fqRAC_JfqBGLWit1P_KzSg?pwd=c8q8 .
+This repo contains an evaluation dataset consisting of hundreds of pairs of sub-meter resolution optical and SAR images, and uses meta poles, which have clear structures in both optical and SAR images, as ground truth to quantitatively evaluate the optical and SAR registration algorithms. We hope this evaluation dataset can provide an equitable and highly precise comparison of hand-crafted algorithms, as well as a generalization evaluation for deep learning networks. The download link is 链接：https://pan.baidu.com/s/1P0b14oEercCHLTk4m5THKw?pwd=ikaa.
 
 The contents of this dataset are subject to CC BY-NC-ND (Creative Commons Attribution-NoDerivatives 4.0 International).
 
@@ -16,6 +16,7 @@ The contents of this dataset are subject to CC BY-NC-ND (Creative Commons Attrib
             OPT-ORG-DSM --> geocoded tiffs using DSM (1m GSD, WGS84)
             SAR-ORG-DSM --> geocoded tiffs using DSM (1m GSD, WGS84)
         shp --> Building shapefile from OpenStreetMap (1m GSD, WGS84)
+        Meta --> metafiles of 11 optical products and 13 SAR products
     Absolute-dataset -->
         Google+GT --> contains ortho tiffs and corresponding GTs (Ortho images from Google Earth, WGS84)
         SAR+RPC+GT --> contains tiffs, RPCs, and corresponding GTs (slant range, without geocoding)
@@ -26,6 +27,7 @@ The contents of this dataset are subject to CC BY-NC-ND (Creative Commons Attrib
             SAR-ORG-DEM --> geocoded tiffs using DEM (1m GSD, WGS84)
             SAR-ORG-DSM --> geocoded tiffs using DSM (1m GSD, WGS84)
         shp --> Building shapefile from OpenStreetMap (1m GSD, WGS84)
+        Meta --> metafiles of 19 SAR products
 
 All the images are stored in uint16 tiff format. Some examples are given as follows,
 ![image](https://github.com/xym2009/OS-Eval/assets/19380078/c7e9c4f3-43b7-4d1b-96e6-2127b3b13459)![image](https://github.com/xym2009/OS-Eval/assets/19380078/c4a1eed8-cbbd-414f-bd31-ea6fdf3f4c6c)
