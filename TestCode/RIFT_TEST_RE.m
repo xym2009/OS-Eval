@@ -31,7 +31,7 @@ sarN{13}='GF3_MYN_SL_015467_W95.9_N41.3_20190719_L1B_HH_L10004125928';
 outRes = 1.0; outLat = 41.293983;
 for k=1:11
     for kk=1:13
-        for kkk=4:9
+        for kkk=1:9
             name1=[optN{k},'-',num2str(kkk)]; name2=[sarN{kk},'-',num2str(kkk)];
             X = ['Match ',name1,' ',name2];disp(X)
             file_image1=['Relative-dataset\Processed\OPT-ORG-DEM\',name1,'-L2.tiff'];
